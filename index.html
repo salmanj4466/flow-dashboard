@@ -1,0 +1,729 @@
+<!doctype html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="description" content="">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+   <!-- Title -->
+   <title>Flow</title>
+   <!-- Favicon -->
+   <link rel="icon" href="img/favicon.png">
+   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+   <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+   <link rel="stylesheet" href="assets/css/style.css">
+   <link rel="stylesheet" href="assets/css/font-awesome.min.css">
+</head>
+<body>
+   <div class="main-container-wrapper">
+      <!-- Top bar area -->
+      <nav class="navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
+         <div class="text-center navbar-brand-wrapper d-flex align-items-center justify-content-center">
+            <a class="navbar-brand brand-logo" href="index.html"><img src="assets/img/logo.png" alt="logo" /></a>
+            <a class="navbar-brand brand-logo-mini" href="index.html"><img src="assets/img/logo.png" alt="logo" /></a>
+         </div>
+         <div class="navbar-menu-wrapper d-flex align-items-center justify-content-between">
+            <form>
+               <div class="form-group position-relative mb-0 d-none d-md-block">
+                  <input type="text" class="form-control search-field" placeholder="Search with Invoic#, Customer, items, Users, Amount...">
+                  <span class="icon-search"></span>
+               </div>
+            </form>
+
+            <ul class="top-navbar-area navbar-nav navbar-nav-right">
+
+               <li class="nav-item nav-profile dropdown dropdown-animate">
+                  <a class="nav-link dropdown-toggle" href="javascript:void(0)" data-toggle="dropdown" id="profileDropdown">
+                    <span class="d-inline-block">Sanabel Alsarq </span>  <span class="d-inline-block"> <img src="assets/img/user.jpg" alt="profile" /> <i class="fa fa-angle-down"></i></span>
+                 </a>
+                 <div class="dropdown-menu dropdown-menu-right navbar-dropdown profile-top" aria-labelledby="profileDropdown">
+                  <a href="javascript:void(0)" class="dropdown-item">
+                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-user profile-icon">
+                        <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                        <circle cx="12" cy="7" r="4"></circle>
+                     </svg>
+                     My profile
+                  </a>
+                  <a href="javascript:void(0)" class="dropdown-item">
+                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-message-square profile-icon">
+                        <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+                     </svg>
+                     Account
+                  </a>
+                  <a href="javascript:void(0)" class="dropdown-item">
+                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-settings profile-icon">
+                        <circle cx="12" cy="12" r="3"></circle>
+                        <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path>
+                     </svg>
+                     Settings
+                  </a>
+                  <a href="javascript:void(0)" class="dropdown-item">
+                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-log-out profile-icon">
+                        <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path>
+                        <polyline points="16 17 21 12 16 7"></polyline>
+                        <line x1="21" y1="12" x2="9" y2="12"></line>
+                     </svg>
+                     Sign-out
+                  </a>
+               </div>
+            </li>
+
+         </ul>
+         <button class="navbar-toggler navbar-toggler-right d-xl-none align-self-center" type="button" data-toggle="offcanvas">
+            <span class="fa fa-bars">
+            </span>
+         </button>
+      </div>
+   </nav>
+   <div class="container-fluid page-body-wrapper">
+      <nav class="sidebar sidebar-offcanvas" id="sidebar">
+         <ul class="nav">
+            <li class="nav-item">
+               <a class="nav-link" href="javascript:void(0)">
+                  <i class="icon-home"></i>
+                  <span class="menu-title">Dashboard</span>
+               </a>
+            </li>
+            <li class="nav-item">
+               <a class="nav-link" href="javascript:void(0)">
+                  <i class="icon-invoices"></i>
+                  <span class="menu-title">Invoices</span>
+               </a>
+            </li>
+            <li class="nav-item active">
+               <a class="nav-link" href="javascript:void(0)">
+                  <i class="icon-cart"></i>
+                  <span class="menu-title">Stores</span>
+               </a>
+            </li>
+            <li class="nav-item">
+               <a class="nav-link" href="javascript:void(0)">
+                  <i class="icon-wallet"></i>
+                  <span class="menu-title">Upay.To</span>
+               </a>
+            </li>
+            <li class="nav-item">
+               <a class="nav-link" href="javascript:void(0)">
+                  <i class="icon-customers"></i>
+                  <span class="menu-title">Customers</span>
+               </a>
+            </li>
+            <li class="nav-item">
+               <a class="nav-link" href="javascript:void(0)">
+                  <i class="icon-reports"></i>
+                  <span class="menu-title">Reports</span>
+               </a>
+            </li>
+            <li class="nav-item">
+               <a class="nav-link" href="javascript:void(0)">
+                  <i class="icon-account"></i>
+                  <span class="menu-title">Account</span>
+               </a>
+            </li>
+            <li class="nav-item">
+               <a class="nav-link" href="javascript:void(0)">
+                  <i class="icon-arrow"></i>
+                  <span class="menu-title">Sign Out</span>
+               </a>
+            </li>
+         </ul>
+      </nav>
+      <div class="main-panel">
+         <div class="content-wrapper">
+            <div class="container-fluid">
+               <div class="row">
+                  <div class="col-md-12">
+                     <div class="card">
+                        <div class="card-body">
+                           <div class="row align-items-center">
+                              <div class="col-sm-7 col-md-6 col-xl-3 order-sm-1 order-xl-1">
+                                 <div class="media store-details">
+                                    <div class="shop-img"> <img src="assets/img/shop.png" alt="shop"></div>
+                                    <div class="media-body">
+                                       <h6 class="mt-0">Current Invoices</h6>
+                                       <p>Store #4763</p>
+                                       <i class="icon-global mr-1"></i>
+                                       <a class="site-url mr-md-3 mr-1" href="javascript:void(0)"> http://upay.to/NSkG0</a> 
+                                       <a href="javascript:void(0)"> <i class="icon-edit"></i></a>
+                                    </div>
+                                 </div>
+                              </div>
+                              <div class="col-md-12 col-xl-5 offset-xl-1 order-sm-3 order-xl-2 mt-xl-0 mt-4">
+                                 <div class="row product-block">
+                                    <div class="col-md-4">
+                                       <div class="card mb-md-0">
+                                          <div class="card-body">
+                                             <div class="row">
+                                                <div class="col-12">
+                                                   <p class="mb-0">Visits</p>
+                                                   <h5>128</h5>
+                                                </div>
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                       <div class="card mb-md-0">
+                                          <div class="card-body">
+                                             <div class="row">
+                                                <div class="col-12">
+                                                   <p class="mb-0">Product</p>
+                                                   <h5>74</h5>
+                                                </div>
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                       <div class="card mb-md-0">
+                                          <div class="card-body">
+                                             <div class="row">
+                                                <div class="col-12">
+                                                   <p class="mb-0">Sales</p>
+                                                   <h5>34.743 <small>KWD</small></h5>
+                                                </div>
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                              <div class="col-sm-5 col-md-6 col-xl-3 text-center text-xl-right order-sm-2 order-xl-3">
+                               <a data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample"> <h6 class="collaspe-text d-inline-block mb-0 mr-2">Operational  Information <span class="fa fa-angle-down"></span>
+                               </h6></a>
+                            </div>
+                         </div>
+                         <div class="row">
+                           <div class="col-lg-12 col-xl-10">
+                              <div class="collapse mt-4" id="collapseExample">
+                                 <form>
+                                    <div class="form-group row align-items-center">
+                                       <div class="col-12">
+                                          <label class="control control--checkbox mr-4 pr-1">
+                                             I am  a restaurant
+                                             <input type="checkbox" checked="checked"/>
+                                             <div class="control__indicator"></div>
+                                          </label>
+                                          <label class="control control--checkbox mr-2 pr-1">
+                                             I am  a restaurant
+                                             <input type="checkbox"/>
+                                             <div class="control__indicator"></div>
+                                          </label>
+                                       </div>
+                                    </div>
+                                    <div class="row">
+                                       <div class="form-group col-md-3">
+                                          <label>Total store views</label>
+                                          <input type="text" class="form-control" placeholder="">
+                                       </div>
+                                       <div class="form-group col-md-3">
+                                          <label>Business Hours</label>
+                                          <input type="text" class="form-control" placeholder="">
+                                       </div>
+                                       <div class="form-group col-md-3">
+                                          <label>Modify Lables</label>
+                                          <input type="text" class="form-control" placeholder="">
+                                       </div>
+                                       <div class="form-group col-md-3">
+                                          <label>Delivery Charges</label>
+                                          <input type="text" class="form-control" placeholder="">
+                                       </div>
+                                    </div>
+                                    <div class="row">
+                                       <div class="form-group col-md-3">
+                                          <label>Delivery time slots</label>
+                                          <input type="text" class="form-control" placeholder="">
+                                       </div>
+                                       <div class="form-group col-md-3">
+                                          <label>Minimum order</label>
+                                          <input type="text" class="form-control" placeholder="">
+                                       </div>
+                                       <div class="form-group col-md-3">
+                                          <label>Delivery Charges</label>
+                                          <input type="text" class="form-control" placeholder="">
+                                       </div>
+                                    </div>
+                                    <div class="row mt-4 mb-3">
+                                       <div class="col-12">
+                                          <h6>Contact Details visibility:</h6>
+                                       </div>
+                                    </div>
+                                    <div class="row">
+                                       <div class="form-group col-md-3">
+                                          <label>Email Address</label>
+                                          <select class="form-control">
+                                             <option>Display</option>
+                                             <option>example@gmail.com</option>
+                                          </select>
+                                       </div>
+                                       <div class="form-group col-md-3">
+                                          <label>Mobile Number</label>
+                                          <select class="form-control">
+                                             <option>Display</option>
+                                             <option>123456</option>
+                                          </select>
+                                       </div>
+                                       <div class="form-group col-md-3">
+                                          <label>Website</label>
+                                          <select class="form-control">
+                                             <option>Display</option>
+                                             <option>www.flow.com</option>
+                                          </select>
+                                       </div>
+                                    </div>
+                                    <div class="row mt-4 mb-3">
+                                       <div class="col-12">
+                                          <h6>Checkout required fields:</h6>
+                                       </div>
+                                    </div>
+                                    <div class="row">
+                                       <div class="form-group col-md-3">
+                                          <label>Full Name</label>
+                                          <select class="form-control">
+                                             <option>Mandatory</option>
+                                             <option></option>
+                                          </select>
+                                       </div>
+                                       <div class="form-group col-md-3">
+                                          <label>Email Address</label>
+                                          <select class="form-control">
+                                             <option>Mandatory</option>
+                                             <option></option>
+                                          </select>
+                                       </div>
+                                       <div class="form-group col-md-3">
+                                          <label>Mobile Number</label>
+                                          <select class="form-control">
+                                             <option>Mandatory</option>
+                                             <option></option>
+                                          </select>
+                                       </div>
+                                       <div class="form-group col-md-3">
+                                          <label>Delovery Address</label>
+                                          <select class="form-control">
+                                             <option>Mandatory</option>
+                                             <option></option>
+                                          </select>
+                                       </div>
+                                    </div>
+                                    <div class="row mb-3">
+                                       <div class="form-group col-md-3">
+                                          <label>Area</label>
+                                          <select class="form-control">
+                                             <option>Optional</option>
+                                             <option></option>
+                                          </select>
+                                       </div>
+                                       <div class="form-group col-md-3">
+                                          <label>Block</label>
+                                          <select class="form-control">
+                                             <option>Hide</option>
+                                             <option></option>
+                                          </select>
+                                       </div>
+                                    </div>
+                                 </form>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div class="col-12 mb-30">
+                  <div class="card bg-boxshadow full-height">
+                     <div class="card-body pb-0">
+                        <div class="row search-filter-block align-items-center mb-2">
+                           <div class="col-md-12 col-lg-8 add-prod-filter">
+                              <form>
+                                <div class="form-group row mb-0">
+                                  <label for="staticEmail" class="col-sm-3 col-form-label pt-0">Product Category:</label>
+                                  <div class="col-sm-3">
+                                    <select class="form-control" id="exampleFormControlSelect1">
+                                       <option>Name</option>
+                                       <option>2</option>
+                                       <option>3</option>
+                                       <option>4</option>
+                                       <option>5</option>
+                                    </select>
+                                 </div>
+                                 <div class="col-sm-2">
+                                    <button type="button" class="btn btn-danger px-3">Add Product</button>
+                                 </div>
+                              </div>
+                           </form>
+                        </div>
+                        <div class="col-md-12 col-lg-4 text-right pt-md-4 pt-lg-0">
+                           <button type="submit" class="btn btn-light mr-md-0">EXPORT TO EXEL</button>
+                           <button type="submit" class="btn btn-light mr-md-0">PRINT <i class="fa fa-print"></i></button>
+
+                        </div>
+                     </div>
+                     <hr>
+                     <div class="table-responsive">
+                        <table class="table layout-table mb-0">
+                           <thead>
+                              <tr>
+                                 <th>
+                                    <label class="control control--checkbox">
+                                       <input type="checkbox"/>
+                                       <div class="control__indicator"></div>
+                                    </label>
+                                 </th>
+                                 <th>No</th>
+                                 <th>Thumbnail</th>
+                                 <th>Product name</th>
+                                 <th>Category</th>
+                                 <th>Price</th>
+                                 <th>Sold</th>
+                                 <th>Quantity</th>
+                                 <th>Actions</th>
+                              </tr>
+                           </thead>
+                           <tbody>
+                              <tr>
+                                 <td>
+                                   <label class="control control--checkbox" style="position: relative; top: -12px;">
+                                    <input type="checkbox"/>
+                                    <div class="control__indicator"></div>
+                                 </label>
+                              </td>
+                              <td>
+                                 1
+                              </td>
+                              <td> <span class="table-img add-prod"><i class="icon-plus"></i></span></td>
+                              <td>
+                                 <div class="form-group mb-0">
+                                    <input type="text" class="form-control" placeholder="Product name" style="width: 200px;">
+                                 </div>
+                              </td>
+                              <td>
+                                 <div class="form-group mb-0">
+                                    <select class="form-control">
+                                       <option>Category</option>
+                                       <option>2</option>
+                                       <option>3</option>
+                                    </select>
+                                 </div>
+                              </td>
+                              <td>
+                                 <div class="form-group mb-0">
+                                    <input type="text" class="form-control" placeholder="Enter Price" style="width: 100px;">
+                                 </div>
+                              </td>
+                              <td colspan="2">
+                              </td>
+                              <td>
+                                 <button type="button" class="btn btn-danger">Save Product</button>
+                              </td>
+                           </tr>
+                           <tr>
+                              <td>
+                                 <label class="control control--checkbox">
+                                    <i class="fa fa-angle-up mx-2"></i>
+                                    <i class="fa fa-angle-down"></i>
+                                    <input type="checkbox">
+                                    <div class="control__indicator"></div>
+                                 </label>
+                              </td>
+                              <td>
+                                 1.
+                              </td>
+                              <td> <span class="table-img"><img src="assets/img/soap-1.png" alt="soap"></span></td>
+                              <td>Hand Soap No. 5 250ml</td>
+                              <td>Cosmetics</td>
+                              <td>$19.40</td>
+                              <td>3</td>
+                              <td>NA</td>
+                              <td>
+                                 <label class="control control--checkbox enabled-radio mr-2 pr-1">
+                                    Enabled
+                                    <input type="checkbox" checked="checked"/>
+                                    <div class="control__indicator"></div>
+                                 </label>
+                                 <a href="javascript:void(0)"> <i class="fa fa-pencil mr-2 pr-1"></i></a>
+                                 <a href="javascript:void(0)"> <i class="fa fa-close"></i> </a>
+                              </td>
+                           </tr>
+                           <tr>
+                              <td>
+                                 <label class="control control--checkbox">
+                                    <i class="fa fa-angle-up mx-2"></i>
+                                    <i class="fa fa-angle-down"></i>
+                                    <input type="checkbox">
+                                    <div class="control__indicator"></div>
+                                 </label>
+                              </td>
+                              <td>
+                                 2.
+                              </td>
+                              <td> <span class="table-img"><img src="assets/img/soap-2.png" alt="soap"></span></td>
+                              <td>Hand Soap No. 5 250ml</td>
+                              <td>Cosmetics</td>
+                              <td>$19.40</td>
+                              <td>3</td>
+                              <td>NA</td>
+                              <td>
+                                 <label class="control control--checkbox enabled-radio mr-2 pr-1">
+                                    Enabled
+                                    <input type="checkbox" checked="checked"/>
+                                    <div class="control__indicator"></div>
+                                 </label>
+                                 <a href="javascript:void(0)"> <i class="fa fa-pencil mr-2 pr-1"></i></a>
+                                 <a href="javascript:void(0)"> <i class="fa fa-close"></i> </a>
+                              </td>
+                           </tr>
+                           <tr>
+                              <td>
+                                 <label class="control control--checkbox">
+                                    <i class="fa fa-angle-up mx-2"></i>
+                                    <i class="fa fa-angle-down"></i>
+                                    <input type="checkbox">
+                                    <div class="control__indicator"></div>
+                                 </label>
+                              </td>
+                              <td>
+                                 3.
+                              </td>
+                              <td> <span class="table-img"><img src="assets/img/soap-3.png" alt="soap"></span></td>
+                              <td>Hand Soap No. 5 250ml</td>
+                              <td>Cosmetics</td>
+                              <td>$19.40</td>
+                              <td>3</td>
+                              <td>NA</td>
+                              <td>
+                                 <label class="control control--checkbox enabled-radio mr-2 pr-1">
+                                    Enabled
+                                    <input type="checkbox" checked="checked"/>
+                                    <div class="control__indicator"></div>
+                                 </label>
+                                 <a href="javascript:void(0)"> <i class="fa fa-pencil mr-2 pr-1"></i></a>
+                                 <a href="javascript:void(0)"> <i class="fa fa-close"></i> </a>
+                              </td>
+                           </tr>
+                           <tr>
+                              <td>
+                                 <label class="control control--checkbox">
+                                    <i class="fa fa-angle-up mx-2"></i>
+                                    <i class="fa fa-angle-down"></i>
+                                    <input type="checkbox">
+                                    <div class="control__indicator"></div>
+                                 </label>
+                              </td>
+                              <td>
+                                 4.
+                              </td>
+                              <td> <span class="table-img"><img src="assets/img/soap-1.png" alt="soap"></span></td>
+                              <td>Hand Soap No. 5 250ml</td>
+                              <td>Cosmetics</td>
+                              <td>$19.40</td>
+                              <td>3</td>
+                              <td>NA</td>
+                              <td>
+                                 <label class="control control--checkbox enabled-radio mr-2 pr-1">
+                                    Enabled
+                                    <input type="checkbox" checked="checked"/>
+                                    <div class="control__indicator"></div>
+                                 </label>
+                                 <a href="javascript:void(0)"> <i class="fa fa-pencil mr-2 pr-1"></i></a>
+                                 <a href="javascript:void(0)"> <i class="fa fa-close"></i> </a>
+                              </td>
+                           </tr>
+                           <tr>
+                              <td>
+                                 <label class="control control--checkbox">
+                                    <i class="fa fa-angle-up mx-2"></i>
+                                    <i class="fa fa-angle-down"></i>
+                                    <input type="checkbox">
+                                    <div class="control__indicator"></div>
+                                 </label>
+                              </td>
+                              <td>
+                                 5.
+                              </td>
+                              <td> <span class="table-img"><img src="assets/img/soap-2.png" alt="soap"></span></td>
+                              <td>Hand Soap No. 5 250ml</td>
+                              <td>Cosmetics</td>
+                              <td>$19.40</td>
+                              <td>3</td>
+                              <td>NA</td>
+                              <td>
+                                 <label class="control control--checkbox enabled-radio mr-2 pr-1">
+                                    Enabled
+                                    <input type="checkbox" checked="checked"/>
+                                    <div class="control__indicator"></div>
+                                 </label>
+                                 <a href="javascript:void(0)"> <i class="fa fa-pencil mr-2 pr-1"></i></a>
+                                 <a href="javascript:void(0)"> <i class="fa fa-close"></i> </a>
+                              </td>
+                           </tr>
+                           <tr>
+                              <td>
+                                 <label class="control control--checkbox">
+                                    <i class="fa fa-angle-up mx-2"></i>
+                                    <i class="fa fa-angle-down"></i>
+                                    <input type="checkbox">
+                                    <div class="control__indicator"></div>
+                                 </label>
+                              </td>
+                              <td>
+                                 6.
+                              </td>
+                              <td> <span class="table-img"><img src="assets/img/soap-3.png" alt="soap"></span></td>
+                              <td>Hand Soap No. 5 250ml</td>
+                              <td>Cosmetics</td>
+                              <td>$19.40</td>
+                              <td>3</td>
+                              <td>NA</td>
+                              <td>
+                                 <label class="control control--checkbox enabled-radio mr-2 pr-1">
+                                    Enabled
+                                    <input type="checkbox" checked="checked"/>
+                                    <div class="control__indicator"></div>
+                                 </label>
+                                 <a href="javascript:void(0)"> <i class="fa fa-pencil mr-2 pr-1"></i></a>
+                                 <a href="javascript:void(0)"> <i class="fa fa-close"></i> </a>
+                              </td>
+                           </tr>
+                           <tr>
+                              <td>
+                                 <label class="control control--checkbox">
+                                    <i class="fa fa-angle-up mx-2"></i>
+                                    <i class="fa fa-angle-down"></i>
+                                    <input type="checkbox">
+                                    <div class="control__indicator"></div>
+                                 </label>
+                              </td>
+                              <td>
+                                 7.
+                              </td>
+                              <td> <span class="table-img"><img src="assets/img/soap-1.png" alt="soap"></span></td>
+                              <td>Hand Soap No. 5 250ml</td>
+                              <td>Cosmetics</td>
+                              <td>$19.40</td>
+                              <td>3</td>
+                              <td>NA</td>
+                              <td>
+                                 <label class="control control--checkbox enabled-radio mr-2 pr-1">
+                                    Enabled
+                                    <input type="checkbox" checked="checked"/>
+                                    <div class="control__indicator"></div>
+                                 </label>
+                                 <a href="javascript:void(0)"> <i class="fa fa-pencil mr-2 pr-1"></i></a>
+                                 <a href="javascript:void(0)"> <i class="fa fa-close"></i> </a>
+                              </td>
+                           </tr>
+                           <tr>
+                              <td>
+                                 <label class="control control--checkbox">
+                                    <i class="fa fa-angle-up mx-2"></i>
+                                    <i class="fa fa-angle-down"></i>
+                                    <input type="checkbox">
+                                    <div class="control__indicator"></div>
+                                 </label>
+                              </td>
+                              <td>
+                                 8.
+                              </td>
+                              <td> <span class="table-img"><img src="assets/img/soap-2.png" alt="soap"></span></td>
+                              <td>Hand Soap No. 5 250ml</td>
+                              <td>Cosmetics</td>
+                              <td>$19.40</td>
+                              <td>3</td>
+                              <td>NA</td>
+                              <td>
+                                 <label class="control control--checkbox enabled-radio mr-2 pr-1">
+                                    Enabled
+                                    <input type="checkbox" checked="checked"/>
+                                    <div class="control__indicator"></div>
+                                 </label>
+                                 <a href="javascript:void(0)"> <i class="fa fa-pencil mr-2 pr-1"></i></a>
+                                 <a href="javascript:void(0)"> <i class="fa fa-close"></i> </a>
+                              </td>
+                           </tr>
+                           <tr>
+                              <td>
+                                 <label class="control control--checkbox">
+                                    <i class="fa fa-angle-up mx-2"></i>
+                                    <i class="fa fa-angle-down"></i>
+                                    <input type="checkbox">
+                                    <div class="control__indicator"></div>
+                                 </label>
+                              </td>
+                              <td>
+                                 9.
+                              </td>
+                              <td> <span class="table-img"><img src="assets/img/soap-3.png" alt="soap"></span></td>
+                              <td>Hand Soap No. 5 250ml</td>
+                              <td>Cosmetics</td>
+                              <td>$19.40</td>
+                              <td>3</td>
+                              <td>NA</td>
+                              <td>
+                                 <label class="control control--checkbox enabled-radio mr-2 pr-1">
+                                    Enabled
+                                    <input type="checkbox" checked="checked"/>
+                                    <div class="control__indicator"></div>
+                                 </label>
+                                 <a href="javascript:void(0)"> <i class="fa fa-pencil mr-2 pr-1"></i></a>
+                                 <a href="javascript:void(0)"> <i class="fa fa-close"></i> </a>
+                              </td>
+                           </tr>
+                           <tr>
+                              <td>
+                                 <label class="control control--checkbox">
+                                    <i class="fa fa-angle-up mx-2"></i>
+                                    <i class="fa fa-angle-down"></i>
+                                    <input type="checkbox">
+                                    <div class="control__indicator"></div>
+                                 </label>
+                              </td>
+                              <td>
+                                 10.
+                              </td>
+                              <td> <span class="table-img"><img src="assets/img/soap-1.png" alt="soap"></span></td>
+                              <td>Hand Soap No. 5 250ml</td>
+                              <td>Cosmetics</td>
+                              <td>$19.40</td>
+                              <td>3</td>
+                              <td>NA</td>
+                              <td>
+                                 <label class="control control--checkbox enabled-radio mr-2 pr-1">
+                                    Enabled
+                                    <input type="checkbox" checked="checked"/>
+                                    <div class="control__indicator"></div>
+                                 </label>
+                                 <a href="javascript:void(0)"> <i class="fa fa-pencil mr-2 pr-1"></i></a>
+                                 <a href="javascript:void(0)"> <i class="fa fa-close"></i> </a>
+                              </td>
+                           </tr>
+                        </tbody>
+                     </table>
+                  </div>
+                  <div class="row mt-3 px-md-4 table-footer align-items-center">
+                     <div class="col-md-12">
+                        <p class="text-center text-danger">LOAD MORE</p>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+</div>
+</div>
+</div>
+</div>
+<!-- Must needed plugins to the run this Template -->
+<script src="assets/js/jquery.min.js"></script>
+<script src="assets/js/popper.min.js"></script>
+<script src="assets/js/bootstrap.min.js"></script>
+<script src="assets/js/canvas.js"></script>
+<script>
+   $(document).ready(function(){
+      $(".collapse-btn").click(function(){
+        $(".collapse-btn").toggleClass("change-icon");
+     });
+   });
+</script>
+</body>
+</html>
